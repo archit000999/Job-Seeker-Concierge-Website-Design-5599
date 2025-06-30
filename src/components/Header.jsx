@@ -8,6 +8,18 @@ const { FiMenu, FiX } = FiIcons;
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+    // Close mobile menu after clicking
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,15 +38,24 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#how-it-works" className="text-gray-600 hover:text-primary-600 transition-colors">
+            <button 
+              onClick={() => scrollToSection('how-it-works')}
+              className="text-gray-600 hover:text-primary-600 transition-colors cursor-pointer"
+            >
               How It Works
-            </a>
-            <a href="#pricing" className="text-gray-600 hover:text-primary-600 transition-colors">
+            </button>
+            <button 
+              onClick={() => scrollToSection('pricing')}
+              className="text-gray-600 hover:text-primary-600 transition-colors cursor-pointer"
+            >
               Pricing
-            </a>
-            <a href="#faq" className="text-gray-600 hover:text-primary-600 transition-colors">
+            </button>
+            <button 
+              onClick={() => scrollToSection('faq')}
+              className="text-gray-600 hover:text-primary-600 transition-colors cursor-pointer"
+            >
               FAQ
-            </a>
+            </button>
             <motion.button
               className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors"
               whileHover={{ scale: 1.05 }}
@@ -65,15 +86,24 @@ const Header = () => {
             exit={{ opacity: 0, y: -10 }}
           >
             <div className="flex flex-col space-y-4">
-              <a href="#how-it-works" className="text-gray-600 hover:text-primary-600 transition-colors">
+              <button 
+                onClick={() => scrollToSection('how-it-works')}
+                className="text-gray-600 hover:text-primary-600 transition-colors text-left cursor-pointer"
+              >
                 How It Works
-              </a>
-              <a href="#pricing" className="text-gray-600 hover:text-primary-600 transition-colors">
+              </button>
+              <button 
+                onClick={() => scrollToSection('pricing')}
+                className="text-gray-600 hover:text-primary-600 transition-colors text-left cursor-pointer"
+              >
                 Pricing
-              </a>
-              <a href="#faq" className="text-gray-600 hover:text-primary-600 transition-colors">
+              </button>
+              <button 
+                onClick={() => scrollToSection('faq')}
+                className="text-gray-600 hover:text-primary-600 transition-colors text-left cursor-pointer"
+              >
                 FAQ
-              </a>
+              </button>
               <button className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors text-left">
                 Get Started
               </button>
