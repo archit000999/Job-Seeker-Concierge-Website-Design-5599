@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Header from './Header';
 import HeroSection from './HeroSection';
+import CompanyLogosCarousel from './CompanyLogosCarousel';
 import ProblemSection from './ProblemSection';
 import HowItWorksSection from './HowItWorksSection';
 import ProofSection from './ProofSection';
@@ -15,6 +16,7 @@ const LandingPage = () => {
       <Header />
       <main>
         <HeroSection />
+        <CompanyLogosCarousel />
         <ProblemSection />
         <HowItWorksSection />
         <ProofSection />

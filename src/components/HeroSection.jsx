@@ -17,7 +17,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="space-y-4">
-              <motion.h1 
+              <motion.h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -27,15 +27,13 @@ const HeroSection = () => {
                 <span className="text-primary-600">Before Jobs</span>{' '}
                 Hit LinkedIn
               </motion.h1>
-              
-              <motion.p 
+              <motion.p
                 className="text-xl text-gray-600 max-w-2xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Saki reaches out to hiring managers for you — at scale, on autopilot.
-                Get in front of decision-makers the moment opportunities open up.
+                ApplyFirst reaches out to hiring managers for you — at scale, on autopilot. Get in front of decision-makers the moment opportunities open up.
               </motion.p>
             </div>
 
@@ -52,7 +50,6 @@ const HeroSection = () => {
               >
                 Get Started Free
               </motion.button>
-              
               <motion.button
                 className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:border-primary-600 hover:text-primary-600 transition-colors"
                 whileHover={{ scale: 1.05 }}
@@ -91,7 +88,6 @@ const HeroSection = () => {
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                   <span className="text-sm text-gray-600">Live outreach in progress</span>
                 </div>
-                
                 <div className="space-y-4">
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
@@ -100,7 +96,6 @@ const HeroSection = () => {
                     </div>
                     <div className="text-xs text-gray-500">Hiring manager contacted in 2 minutes</div>
                   </div>
-                  
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-medium text-gray-700">Engineering Director</span>
@@ -108,7 +103,6 @@ const HeroSection = () => {
                     </div>
                     <div className="text-xs text-gray-500">Interview scheduled for next week</div>
                   </div>
-                  
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-medium text-gray-700">VP of Marketing</span>

@@ -46,16 +46,14 @@ const PricingSection = () => {
           >
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Saki Concierge Service
+                ApplyFirst Concierge Service
               </h3>
-              
               <div className="space-y-4">
                 <div className="flex items-center justify-center space-x-2">
                   <SafeIcon icon={FiDollarSign} className="w-6 h-6 text-primary-600" />
                   <span className="text-4xl font-bold text-gray-900">$299</span>
                   <span className="text-gray-600">/month</span>
                 </div>
-                
                 <div className="bg-green-100 text-green-800 px-4 py-2 rounded-lg inline-block">
                   <span className="font-semibold">Refundable Security Deposit</span>
                 </div>
@@ -70,12 +68,11 @@ const PricingSection = () => {
                   <div className="text-gray-600">If we don't land you interviews, you get your deposit back</div>
                 </div>
               </div>
-              
               <div className="flex items-start space-x-3">
                 <SafeIcon icon={FiTrendingUp} className="w-6 h-6 text-primary-500 mt-1" />
                 <div>
                   <div className="font-semibold text-gray-900">Success-Based Fee</div>
-                  <div className="text-gray-600">Only pay 1% of first-month compensation when you get hired through our efforts</div>
+                  <div className="text-gray-600">Only pay 1% of yearly compensation when you get hired through our efforts</div>
                 </div>
               </div>
             </div>
@@ -105,7 +102,6 @@ const PricingSection = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 How Our Pricing Works
               </h3>
-              
               <div className="space-y-6">
                 <div className="bg-gray-50 rounded-xl p-6">
                   <div className="flex items-center space-x-3 mb-3">
@@ -116,7 +112,6 @@ const PricingSection = () => {
                     Pay $299/month as a refundable security deposit. This covers our operational costs and shows you're serious about your job search.
                   </p>
                 </div>
-                
                 <div className="bg-gray-50 rounded-xl p-6">
                   <div className="flex items-center space-x-3 mb-3">
                     <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
@@ -126,14 +121,13 @@ const PricingSection = () => {
                     Our team works to land you interviews. If we don't deliver within 60 days, you get your full deposit back — no questions asked.
                   </p>
                 </div>
-                
                 <div className="bg-gray-50 rounded-xl p-6">
                   <div className="flex items-center space-x-3 mb-3">
                     <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
                     <h4 className="font-semibold text-gray-900">Success Fee Only When You Win</h4>
                   </div>
                   <p className="text-gray-600 ml-11">
-                    When you land a job through our outreach, we charge just 1% of your first month's compensation. Your success is our success.
+                    When you land a job through our outreach, we charge just 1% of your yearly compensation. Your success is our success.
                   </p>
                 </div>
               </div>
@@ -146,7 +140,7 @@ const PricingSection = () => {
             >
               <h4 className="font-bold text-lg mb-2">Example Scenario:</h4>
               <p className="text-primary-100 mb-4">
-                You land a $120K role through Saki. You pay our 1% success fee ($1,200 from your first month's $10K salary) and get your $299 deposit back.
+                You land a $120K role through ApplyFirst. You pay our 1% success fee ($1,200 from your yearly $120K salary) and get your $299 deposit back.
               </p>
               <div className="text-primary-100">
                 <strong>Total cost: $1,200 for a $120K opportunity</strong>

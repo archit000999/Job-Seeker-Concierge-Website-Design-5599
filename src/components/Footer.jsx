@@ -20,9 +20,9 @@ const Footer = () => {
           >
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
+                <span className="text-white font-bold text-lg">A</span>
               </div>
-              <span className="text-xl font-bold">Saki</span>
+              <span className="text-xl font-bold">ApplyFirst</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
               Land interviews before jobs hit LinkedIn. Our automated outreach puts you ahead of the competition.
@@ -79,7 +79,7 @@ const Footer = () => {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center space-x-3">
                 <SafeIcon icon={FiMail} className="w-4 h-4" />
-                <span>hello@saki.com</span>
+                <span>hello@applyfirst.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <SafeIcon icon={FiPhone} className="w-4 h-4" />
@@ -101,7 +101,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <div className="text-gray-400 text-sm">
-            © 2024 Saki. All rights reserved.
+            © 2024 ApplyFirst. All rights reserved.
           </div>
           <div className="flex space-x-6 text-sm text-gray-400 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

@@ -38,18 +38,17 @@ const HowItWorksSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            How Saki Works
+            How ApplyFirst Works
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our automated system puts you ahead of the competition by reaching hiring managers 
-            the moment opportunities become available.
+            Our automated system puts you ahead of the competition by reaching hiring managers the moment opportunities become available.
           </p>
         </motion.div>
 
         <div className="relative">
           {/* Connection Lines */}
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-200 via-primary-400 to-primary-200 transform -translate-y-1/2"></div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 relative">
             {steps.map((step, index) => (
               <motion.div
@@ -69,15 +68,12 @@ const HowItWorksSection = () => {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mb-4">
                     <SafeIcon icon={step.icon} className="w-8 h-8 text-primary-600" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">
                     {step.title}
                   </h3>
-                  
                   <p className="text-gray-600 leading-relaxed mb-4">
                     {step.description}
                   </p>
-
                   <div className="bg-primary-50 rounded-lg p-3">
                     <span className="text-sm font-medium text-primary-700">
                       {step.detail}
@@ -108,7 +104,7 @@ const HowItWorksSection = () => {
               Ready to Skip the Competition?
             </h3>
             <p className="text-lg text-primary-100 mb-6">
-              Join professionals who are landing interviews 3x faster with Saki's automated outreach.
+              Join professionals who are landing interviews 3x faster with ApplyFirst's automated outreach.
             </p>
             <motion.button
               className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"

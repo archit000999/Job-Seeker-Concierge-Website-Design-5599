@@ -23,7 +23,7 @@ const FAQSection = () => {
     },
     {
       question: "How does the 1% success fee work?",
-      answer: "You only pay our 1% success fee when you actually get hired through a job we helped you discover and apply for. It's calculated as 1% of your first month's gross compensation. If you get hired through other means, there's no success fee."
+      answer: "You only pay our 1% success fee when you actually get hired through a job we helped you discover and apply for. It's calculated as 1% of your yearly gross compensation. If you get hired through other means, there's no success fee."
     },
     {
       question: "Can I cancel anytime?",
@@ -61,7 +61,7 @@ const FAQSection = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-gray-600">
-            Everything you need to know about Saki's concierge job search service.
+            Everything you need to know about ApplyFirst's concierge job search service.
           </p>
         </motion.div>
 
@@ -82,12 +82,11 @@ const FAQSection = () => {
                 <h3 className="text-lg font-semibold text-gray-900 pr-4">
                   {faq.question}
                 </h3>
-                <SafeIcon 
-                  icon={openIndex === index ? FiMinus : FiPlus} 
-                  className="w-5 h-5 text-primary-600 flex-shrink-0" 
+                <SafeIcon
+                  icon={openIndex === index ? FiMinus : FiPlus}
+                  className="w-5 h-5 text-primary-600 flex-shrink-0"
                 />
               </button>
-              
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.div

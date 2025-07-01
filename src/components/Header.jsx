@@ -31,9 +31,9 @@ const Header = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">S</span>
+              <span className="text-white font-bold text-lg">A</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">Saki</span>
+            <span className="text-xl font-bold text-gray-900">ApplyFirst</span>
           </motion.div>
 
           {/* Desktop Navigation */}
