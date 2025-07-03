@@ -23,7 +23,7 @@ const HowItWorksSection = () => {
       icon: FiTarget,
       title: "You're in the first 10 applicants",
       description: "By reaching hiring managers before jobs go public, you skip the crowd and get genuine consideration for the role.",
-      detail: "3x higher interview rate vs traditional applications"
+      detail: "3x interview rate vs traditional applications"
     }
   ];
 
@@ -53,28 +53,33 @@ const HowItWorksSection = () => {
             {steps.map((step, index) => (
               <motion.div
                 key={index}
-                className="relative bg-white rounded-2xl p-8 shadow-xl border border-gray-100"
+                className="relative bg-white rounded-2xl p-8 shadow-xl border border-gray-100 flex flex-col h-full"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
               >
                 {/* Step Number */}
-                <div className="absolute -top-4 left-8 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                {/* <div className="absolute -top-4 left-8 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
                   {index + 1}
-                </div>
+                </div> */}
 
-                <div className="mb-6">
+                {/* Main Content - Takes up available space */}
+                <div className="flex-grow">
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mb-4">
                     <SafeIcon icon={step.icon} className="w-8 h-8 text-primary-600" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">
+                  <p className="text-gray-600 leading-relaxed mb-6">
                     {step.description}
                   </p>
-                  <div className="bg-primary-50 rounded-lg p-3">
+                </div>
+
+                {/* Detail Section - Always at bottom */}
+                <div className="mt-auto">
+                  <div className="bg-primary-50 rounded-lg px-3 py-2">
                     <span className="text-sm font-medium text-primary-700">
                       {step.detail}
                     </span>
@@ -82,11 +87,11 @@ const HowItWorksSection = () => {
                 </div>
 
                 {/* Arrow for desktop */}
-                {index < steps.length - 1 && (
+                {/* {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2">
                     <SafeIcon icon={FiArrowRight} className="w-6 h-6 text-primary-400" />
                   </div>
-                )}
+                )} */}
               </motion.div>
             ))}
           </div>

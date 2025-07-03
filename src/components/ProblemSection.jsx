@@ -56,7 +56,7 @@ const ProblemSection = () => {
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
                   <SafeIcon icon={problem.icon} className="w-6 h-6 text-red-600" />
                 </div>
-                <SafeIcon icon={FiX} className="w-5 h-5 text-red-500" />
+                {/* <SafeIcon icon={FiX} className="w-5 h-5 text-red-500" /> */}
               </div>
               
               <h3 className="text-xl font-semibold text-gray-900 mb-3">

@@ -37,7 +37,7 @@ const CompanyLogosCarousel = () => {
           <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
           
           <motion.div
-            className="flex space-x-12"
+            className="flex space-x-12 my-2 cursor-default"
             animate={{
               x: [0, -50 * companies.length]
             }}
@@ -57,7 +57,7 @@ const CompanyLogosCarousel = () => {
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.2 }}
               >
-                <div className="bg-white rounded-xl border border-gray-200 shadow-sm px-8 py-4 hover:shadow-md transition-shadow duration-200">
+                <div className="bg-white rounded-xl border border-gray-200 shadow-sm px-8 py-3 hover:shadow-md hover: transition-shadow duration-200">
                   <span className="text-xl font-bold text-gray-700 whitespace-nowrap">
                     {company}
                   </span>

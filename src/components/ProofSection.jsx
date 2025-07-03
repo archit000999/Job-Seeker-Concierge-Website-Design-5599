@@ -73,11 +73,11 @@ const ProofSection = () => {
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20 ">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-xl p-8 text-center shadow-lg border border-gray-100"
+              className="bg-white rounded-xl p-8 text-center shadow-md hover:shadow-lg border border-gray-100"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}

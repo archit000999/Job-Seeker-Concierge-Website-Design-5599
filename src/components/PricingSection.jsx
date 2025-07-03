@@ -50,7 +50,7 @@ const PricingSection = () => {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center justify-center space-x-2">
-                  <SafeIcon icon={FiDollarSign} className="w-6 h-6 text-primary-600" />
+                  {/* <SafeIcon icon={FiDollarSign} className="w-6 h-6 text-primary-600" /> */}
                   <span className="text-4xl font-bold text-gray-900">$299</span>
                   <span className="text-gray-600">/month</span>
                 </div>
@@ -105,7 +105,7 @@ const PricingSection = () => {
               <div className="space-y-6">
                 <div className="bg-gray-50 rounded-xl p-6">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+                    <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
                     <h4 className="font-semibold text-gray-900">Start with Security Deposit</h4>
                   </div>
                   <p className="text-gray-600 ml-11">
@@ -114,7 +114,7 @@ const PricingSection = () => {
                 </div>
                 <div className="bg-gray-50 rounded-xl p-6">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
+                    <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
                     <h4 className="font-semibold text-gray-900">We Deliver Results</h4>
                   </div>
                   <p className="text-gray-600 ml-11">

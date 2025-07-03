@@ -76,7 +76,7 @@ const FAQSection = () => {
               viewport={{ once: true }}
             >
               <button
-                className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors focus:outline-none focus:ring-0 focus:border-none"
                 onClick={() => toggleFAQ(index)}
               >
                 <h3 className="text-lg font-semibold text-gray-900 pr-4">

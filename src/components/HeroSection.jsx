@@ -7,7 +7,7 @@ const { FiTarget, FiTrendingUp, FiZap } = FiIcons;
 
 const HeroSection = () => {
   return (
-    <section className="pt-20 pb-16 bg-gradient-to-br from-primary-50 to-white">
+    <section className="pt-20 mt-10 pb-16 bg-gradient-to-br from-primary-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -16,7 +16,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="space-y-4">
+            <div className="space-y-6">
               <motion.h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
                 initial={{ opacity: 0, y: 20 }}
