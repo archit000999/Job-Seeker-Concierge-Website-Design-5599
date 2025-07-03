@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
@@ -7,6 +8,16 @@ const { FiPlus, FiMinus } = FiIcons;
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/login');
+  };
+
+  const handleBookConsult = () => {
+    // You can implement a booking system or redirect to a calendar link
+    console.log('Book consultation clicked');
+  };
 
   const faqs = [
     {
@@ -122,6 +133,7 @@ const FAQSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
+                onClick={handleGetStarted}
                 className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -129,6 +141,7 @@ const FAQSection = () => {
                 See If You Qualify
               </motion.button>
               <motion.button
+                onClick={handleBookConsult}
                 className="border border-primary-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

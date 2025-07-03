@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
@@ -6,6 +7,17 @@ import * as FiIcons from 'react-icons/fi';
 const { FiTarget, FiTrendingUp, FiZap } = FiIcons;
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/login');
+  };
+
+  const handleBookConsult = () => {
+    // You can implement a booking system or redirect to a calendar link
+    console.log('Book consultation clicked');
+  };
+
   return (
     <section className="pt-20 pb-16 bg-gradient-to-br from-primary-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,9 +35,9 @@ const HeroSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                Land Interviews{' '}
-                <span className="text-primary-600">Before Jobs</span>{' '}
-                Hit LinkedIn
+                Reach Hiring Managers{' '}
+                <span className="text-primary-600">the Moment</span>{' '}
+                a Job Goes Live
               </motion.h1>
               <motion.p
                 className="text-xl text-gray-600 max-w-2xl"
@@ -33,7 +45,8 @@ const HeroSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                ApplyFirst reaches out to hiring managers for you — at scale, on autopilot. Get in front of decision-makers the moment opportunities open up.
+                ApplyFirst reaches out to hiring managers for you — at scale, on autopilot.
+                Get in front of decision-makers the moment opportunities open up.
               </motion.p>
             </div>
 
@@ -44,6 +57,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <motion.button
+                onClick={handleGetStarted}
                 className="bg-primary-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -51,6 +65,7 @@ const HeroSection = () => {
                 Get Started Free
               </motion.button>
               <motion.button
+                onClick={handleBookConsult}
                 className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:border-primary-600 hover:text-primary-600 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

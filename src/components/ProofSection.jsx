@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
@@ -6,6 +7,12 @@ import * as FiIcons from 'react-icons/fi';
 const { FiTrendingUp, FiUsers, FiTarget, FiClock } = FiIcons;
 
 const ProofSection = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/login');
+  };
+
   const stats = [
     {
       icon: FiTarget,
@@ -35,19 +42,19 @@ const ProofSection = () => {
 
   const testimonials = [
     {
-      quote: "I landed 3 interviews in my first week with Saki. The hiring managers were impressed that I reached out so quickly.",
+      quote: "I landed 3 interviews in my first week with ApplyFirst. The hiring managers were impressed that I reached out so quickly.",
       author: "Sarah Chen",
       role: "Senior Product Manager",
       company: "Tech Startup"
     },
     {
-      quote: "Finally, a service that actually works. I was getting lost in the LinkedIn application black hole before Saki.",
+      quote: "Finally, a service that actually works. I was getting lost in the LinkedIn application black hole before ApplyFirst.",
       author: "Michael Rodriguez",
       role: "Engineering Director",
       company: "Fortune 500"
     },
     {
-      quote: "The ROI is incredible. I got my dream job through Saki's outreach and the 1% fee was totally worth it.",
+      quote: "The ROI is incredible. I got my dream job through ApplyFirst's outreach and the 1% fee was totally worth it.",
       author: "Jennifer Kim",
       role: "VP of Marketing",
       company: "Scale-up"
@@ -86,15 +93,12 @@ const ProofSection = () => {
               <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <SafeIcon icon={stat.icon} className="w-8 h-8 text-primary-600" />
               </div>
-              
               <div className="text-3xl font-bold text-gray-900 mb-2">
                 {stat.number}
               </div>
-              
               <div className="text-lg font-semibold text-gray-700 mb-1">
                 {stat.label}
               </div>
-              
               <div className="text-sm text-gray-500">
                 {stat.sublabel}
               </div>
@@ -113,7 +117,6 @@ const ProofSection = () => {
           <h3 className="text-2xl font-bold text-gray-900 text-center mb-12">
             What Our Clients Say
           </h3>
-          
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -130,7 +133,6 @@ const ProofSection = () => {
                     {testimonial.quote}
                   </p>
                 </div>
-                
                 <div className="border-t pt-4">
                   <div className="font-semibold text-gray-900">
                     {testimonial.author}
@@ -160,6 +162,7 @@ const ProofSection = () => {
               Start landing interviews before your competition even knows the jobs exist.
             </p>
             <motion.button
+              onClick={handleGetStarted}
               className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
