@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
@@ -6,6 +7,12 @@ import * as FiIcons from 'react-icons/fi';
 const { FiSearch, FiMail, FiTarget, FiArrowRight } = FiIcons;
 
 const HowItWorksSection = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/login');
+  };
+
   const steps = [
     {
       icon: FiSearch,
@@ -41,14 +48,15 @@ const HowItWorksSection = () => {
             How ApplyFirst Works
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our automated system puts you ahead of the competition by reaching hiring managers the moment opportunities become available.
+            Our automated system puts you ahead of the competition by reaching hiring managers
+            the moment opportunities become available.
           </p>
         </motion.div>
 
         <div className="relative">
           {/* Connection Lines */}
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-200 via-primary-400 to-primary-200 transform -translate-y-1/2"></div>
-
+          
           <div className="grid md:grid-cols-3 gap-8 relative">
             {steps.map((step, index) => (
               <motion.div
@@ -112,6 +120,7 @@ const HowItWorksSection = () => {
               Join professionals who are landing interviews 3x faster with ApplyFirst's automated outreach.
             </p>
             <motion.button
+              onClick={handleGetStarted}
               className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

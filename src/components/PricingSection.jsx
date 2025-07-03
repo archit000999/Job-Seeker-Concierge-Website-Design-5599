@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
@@ -6,6 +7,12 @@ import * as FiIcons from 'react-icons/fi';
 const { FiCheck, FiDollarSign, FiRefreshCw, FiTrendingUp } = FiIcons;
 
 const PricingSection = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/login');
+  };
+
   const features = [
     "Automated job scanning across 50+ sources",
     "Direct outreach to hiring managers",
@@ -112,6 +119,7 @@ const PricingSection = () => {
                     Pay $299/month as a refundable security deposit. This covers our operational costs and shows you're serious about your job search.
                   </p>
                 </div>
+
                 <div className="bg-gray-50 rounded-xl p-6">
                   <div className="flex items-center space-x-3 mb-3">
                     <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
@@ -121,6 +129,7 @@ const PricingSection = () => {
                     Our team works to land you interviews. If we don't deliver within 60 days, you get your full deposit back — no questions asked.
                   </p>
                 </div>
+
                 <div className="bg-gray-50 rounded-xl p-6">
                   <div className="flex items-center space-x-3 mb-3">
                     <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
@@ -148,6 +157,7 @@ const PricingSection = () => {
             </motion.div>
 
             <motion.button
+              onClick={handleGetStarted}
               className="w-full bg-primary-600 text-white py-4 rounded-lg text-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
